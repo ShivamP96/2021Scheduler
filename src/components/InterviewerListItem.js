@@ -10,14 +10,13 @@ let interviewerClass = classNames('interviewers__item', {
 
 
   return (
-    <li className={interviewerClass} onClick={() => 
-    props.setInterviewer(props.name)}>
+    <li className={interviewerClass} onClick={() => props.setInterviewer(props.name)}>
       <img
         className="interviewers__item-image"
-        src="https://i.imgur.com/LpaY82x.png"
-        alt="Sylvia Palmer"
+        src={props.avatar}
+        alt={props.name}
       />
-      Sylvia Palmer
+      {props.selected && props.name}
     </li>
   )
 
