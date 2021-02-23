@@ -10,7 +10,7 @@ const lists = props.interviewers.map(interviewer => {
     key={interviewer.id}
     name={interviewer.name}
     avatar={interviewer.avatar}
-    setInterviewer={props.setInterviewer}
+    setInterviewer={event => props.setInterviewer(interviewer.id)}
     selected={props.interviewer === interviewer.id}
     />
   )
